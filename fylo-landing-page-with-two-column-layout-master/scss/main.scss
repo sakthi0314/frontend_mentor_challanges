@@ -1,0 +1,476 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+// color variables
+$VeryDarkBlue: hsl(243, 87%, 12%);
+$DesaturatedBlue: hsl(238, 22%, 44%);
+
+$BrightBlue: hsl(224, 93%, 58%);
+$ModerateCyan: hsl(170, 45%, 43%);
+
+$LightGrayishBlue: #f8f8fe;
+$LightGray: hsl(0, 0%, 75%);
+
+// Mixins
+@mixin flexbox($dir, $jus, $align) {
+  display: flex;
+  justify-content: $jus;
+  align-items: $align;
+  flex-direction: $dir;
+}
+
+// Globle reset
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media (max-width: 699px) {
+    font-size: 56.4%;
+  }
+}
+
+body {
+  color: $VeryDarkBlue;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  padding: 1.2rem 0.8rem;
+  outline: none;
+  border: none;
+}
+
+button {
+  padding: 1.2rem 4rem;
+  background-color: $BrightBlue;
+  color: $LightGrayishBlue;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+}
+
+// Styles goes here
+
+.navbar {
+  display: block;
+  padding: 4rem 2rem;
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    @include flexbox(row, space-between, center);
+  }
+
+  &__logo {
+    width: 12rem;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    @include flexbox(row, center, center);
+
+    li {
+      &:not(:last-child) {
+        margin-right: 4vw;
+      }
+    }
+  }
+
+  &__item {
+    color: $VeryDarkBlue;
+  }
+}
+
+.hero {
+  padding: 4rem 2rem;
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    @include flexbox(row, space-between, center);
+
+    @media (max-width: 699px) {
+      @include flexbox(column-reverse, center, center);
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    width: 100%;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+
+    @media (max-width: 699px) {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 0rem;
+    }
+  }
+
+  &__content {
+    @media (max-width: 699px) {
+      @include flexbox(column, center, center);
+    }
+  }
+
+  &__form {
+    @media (max-width: 699px) {
+      width: 100%;
+      @include flexbox(column, center, center);
+    }
+  }
+
+  &__description {
+    width: 60%;
+    margin: 2rem 0;
+
+    @media (max-width: 699px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__illuration {
+    width: 80rem;
+
+    @media (max-width: 699px) {
+      width: 40rem;
+      margin-bottom: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__btn {
+    margin-left: 0.6vw;
+    @media (max-width: 699px) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    padding: 1.2rem 0.5rem;
+    border: 1px solid $VeryDarkBlue;
+    width: 50%;
+    border-radius: 0.5rem;
+
+    @media (max-width: 699px) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.procuction {
+  background-color: $LightGrayishBlue;
+  padding: 4rem 1rem;
+
+  @media (max-width: 699px) {
+    padding: 1rem;
+  }
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    @include flexbox(row, space-between, center);
+
+    @media (max-width: 699px) {
+      @include flexbox(column-reverse, center, center);
+    }
+  }
+
+  &__content {
+    @media (max-width: 699px) {
+      @include flexbox(column, center, center);
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 699px) {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+
+  &__primaryText {
+    font-size: 1.6rem;
+    width: 80%;
+    margin-bottom: 1rem;
+
+    @media (max-width: 699px) {
+      margin-bottom: 2.4rem;
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    padding-bottom: 0.5rem;
+    color: $ModerateCyan;
+    border-bottom: 1px solid $ModerateCyan;
+
+    @media (max-width: 699px) {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+
+  &__secondaryText {
+    font-size: 1.6rem;
+    width: 80%;
+    margin-bottom: 1rem;
+
+    @media (max-width: 699px) {
+      margin-bottom: 0.7rem;
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  &__card {
+    margin-top: 4rem;
+    background-color: #fff;
+    width: 40rem;
+    padding: 4rem;
+    border-radius: 0.7rem;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.151);
+
+    @media (max-width: 699px) {
+      margin: 3rem 0;
+    }
+  }
+
+  &__qoute {
+    margin-bottom: 1rem;
+  }
+
+  &__cardText {
+    font-size: 1.5rem;
+  }
+
+  &__profile {
+    @include flexbox(row, flex-start, center);
+    margin-top: 1.5rem;
+  }
+
+  &__avatar {
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+
+    img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+  }
+  &__illutration {
+    width: 70rem;
+
+    @media (max-width: 699px) {
+      width: 40rem;
+      margin-bottom: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.geteasy {
+  padding: 5rem 1rem;
+  background-color: $DesaturatedBlue;
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    @include flexbox(row, space-between, center);
+
+    @media (max-width: 699px) {
+      @include flexbox(column, center, center);
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+
+    @media (max-width: 699px) {
+      text-align: center;
+    }
+  }
+
+  &__descrption {
+    color: #fff;
+    width: 60%;
+
+    @media (max-width: 699px) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__form {
+    @include flexbox(column, flex-start, flex-start);
+
+    @media (max-width: 699px) {
+      @include flexbox(column, center, center);
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+
+  &__input {
+    width: 30vw;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+
+    @media (max-width: 699px) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    @media (max-width: 699px) {
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  padding: 5rem 1rem;
+  background-color: $VeryDarkBlue;
+
+  @media (max-width: 699px) {
+    padding: 3rem 1rem;
+  }
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    @include flexbox(column, center, flex-start);
+  }
+
+  &__logo {
+    width: 12rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 699px) {
+      margin-bottom: 2rem;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__details {
+    width: 100%;
+    @include flexbox(row, space-between, flex-start);
+
+    ul {
+      @media (max-width: 699px) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 699px) {
+      @include flexbox(column, center, flex-start);
+    }
+
+    li {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    li a {
+      color: #fff;
+    }
+  }
+
+  &__social {
+    @include flexbox(row, center, center);
+
+    @media (max-width: 699px) {
+      @include flexbox(row, center, center);
+      width: 100%;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+.bg-curve-desktop {
+  width: 100%;
+  margin-bottom: -5px;
+
+  @media (max-width: 599px) {
+    display: none;
+  }
+}
+
+.bg-curve-mobile {
+  display: none;
+
+  @media (max-width: 599px) {
+    display: block;
+    width: 100%;
+    margin-bottom: -5px;
+  }
+}
+
+ion-icon {
+  font-size: 1.8rem;
+}
+
+// animation
+[data-scroll] {
+  transition: all 1s;
+}
+
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(-200px);
+}
