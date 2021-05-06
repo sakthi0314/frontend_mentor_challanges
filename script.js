@@ -3,6 +3,7 @@ const projects = [
   "huddle-landing-page-with-single-introductory",
   "loopstudios-landing-page-main",
   "fylo-landing-page-with-two-column-layout-master",
+  "huddle-landing-page-with-curved-sections-master",
 ];
 
 const list = document.getElementById("list");
@@ -12,7 +13,7 @@ projects.forEach((name, i) => {
 
   listItem.innerHTML = `
           <a href="/${name}/index.html">
-              <img src="/${name}/design/desktop-design.jpg" alt="${name}" />
+              <img src="/${name}/design/desktop-preview.jpg" alt="${name}" />
               <p>${i + 1}. ${formatProjectName(name)}</p>
           </a>
       `;
