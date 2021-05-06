@@ -2,6 +2,7 @@ const projects = [
   "article-preview-component-master",
   "huddle-landing-page-with-single-introductory",
   "loopstudios-landing-page-main",
+  "fylo-landing-page-with-two-column-layout-master",
 ];
 
 const list = document.getElementById("list");
