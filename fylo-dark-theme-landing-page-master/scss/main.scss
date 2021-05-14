@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+@import "./abstracts/mixins";
+@import "./abstracts/varibales";
+
+@import "./base/rest";
+@import "./base/typography";
+
+@import "./components/buttons";
+
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 699px) {
+    font-size: 53.7%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: $DarkBlueIntro;
+}
+
+// Navbar
+.navbar {
+  display: block;
+  height: 18rem;
+  padding: 2rem;
+
+  @media (max-width: 699px) {
+    height: 10rem;
+  }
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    @include flexbox(row, space-between, center);
+    height: 100%;
+  }
+
+  &__logo {
+    width: 18rem;
+
+    @media (max-width: 699px) {
+      width: 10rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    @include flexbox(row, center, center);
+
+    li {
+      &:not(:last-child) {
+        margin-right: 5rem;
+      }
+    }
+  }
+
+  &__item {
+    color: $White;
+    font-weight: 400;
+  }
+}
+
+// hero
+.hero {
+  padding: 0rem 2rem;
+  background-image: url("../images/bg-curvy-desktop.svg");
+  height: 100vh;
+  width: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 270px;
+  z-index: 1;
+
+  @media (max-width: 699px) {
+    background-image: url("../images/bg-curvy-mobile.svg");
+  }
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    @include flexbox(column, center, center);
+  }
+
+  &__content {
+    @include flexbox(column, center, center);
+  }
+
+  &__title {
+    color: $White;
+    font-size: 4rem;
+    width: 75%;
+    text-align: center;
+
+    @media (max-width: 699px) {
+      width: 100%;
+    }
+  }
+
+  &__descrption {
+    color: $White;
+    font-size: 1.6rem;
+    width: 75%;
+    text-align: center;
+    margin: 2rem 0;
+
+    @media (max-width: 699px) {
+      width: 100%;
+    }
+  }
+
+  &__illuration {
+    width: 60rem;
+
+    @media (max-width: 699px) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+// features
+.features {
+  padding: 15rem 2rem 10rem 2rem;
+  background-color: $DarkBlueMain;
+
+  @media (max-width: 699px) {
+    padding: 5rem 2rem;
+  }
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: repeat(2, 30rem);
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+
+    @media (max-width: 699px) {
+      grid-template-rows: 1fr;
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__item {
+    @include flexbox(column, center, center);
+    margin: 1rem;
+
+    @media (max-width: 699px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__itemImg {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__itemTitle {
+    font-size: 1.8rem;
+    color: $White;
+    margin: 1rem 0;
+  }
+
+  &__itemDesc {
+    text-align: center;
+    width: 40rem;
+    font-size: 1.4rem;
+    color: $White;
+  }
+}
+
+// Stay product
+.productive {
+  padding: 0rem 2rem;
+  background-color: $DarkBlueMain;
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    @include flexbox(row, center, center);
+
+    @media (max-width: 699px) {
+      @include flexbox(column, center, center);
+    }
+  }
+
+  &__illutration {
+    flex: 100%;
+    margin-right: 14rem;
+
+    @media (max-width: 699px) {
+      margin-right: 0rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    flex-basis: 100%;
+    @include flexbox(column, center, flex-start);
+    margin-top: 2rem;
+  }
+
+  &__title {
+    color: $White;
+    font-size: 3rem;
+    width: 70%;
+    margin-bottom: 1rem;
+
+    @media (max-width: 699px) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    color: $White;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    width: 80%;
+
+    @media (max-width: 699px) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__subDesc {
+    color: $White;
+    font-size: 1.4rem;
+    width: 80%;
+
+    @media (max-width: 699px) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    @include flexbox(row, center, center);
+    margin-top: 2rem;
+    cursor: pointer;
+
+    @media (max-width: 699px) {
+      text-align: center;
+      width: 100%;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $Cyan;
+      border-bottom: 1px solid $Cyan;
+      margin-right: 1rem;
+    }
+  }
+}
+
+// Testimonial
+.testimonial {
+  padding: 6rem 2rem;
+  background-color: $DarkBlueMain;
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+  }
+
+  &__cards {
+    @include flexbox(row, space-between, center);
+    padding-top: 6rem;
+    position: relative;
+
+    @media (max-width: 699px) {
+      @include flexbox(column, center, center);
+      padding-top: 3rem;
+    }
+
+    .qoute {
+      position: absolute;
+      top: 10%;
+      z-index: 9;
+    }
+  }
+
+  &__card {
+    cursor: pointer;
+    background-color: $DarkBlueIntro;
+    width: 40rem;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: all 0.2s ease;
+    z-index: 10;
+
+    @media (max-width: 699px) {
+      margin-bottom: 3rem;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.3rem;
+
+      @media (max-width: 699px) {
+        @include flexbox(column, center, center);
+        margin-right: 0;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__cardText {
+    color: $White;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  &__profile {
+    @include flexbox(row, flex-start, center);
+
+    img {
+      border-radius: 50%;
+      height: 4rem;
+      width: 4rem;
+      margin-right: 1rem;
+    }
+
+    h6 {
+      color: $White;
+    }
+
+    p {
+      color: $White;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// Center card
+
+.box {
+  display: grid;
+  place-items: center;
+  background-color: $DarkBlueMain;
+  margin-bottom: -8rem;
+
+  &__card {
+    background-color: $DarkBlueIntro;
+    width: 65%;
+    max-width: 90%;
+    @include flexbox(column, center, center);
+    padding: 4rem 2rem;
+    border-radius: 0.4rem;
+    box-shadow: 2px 3px 10px rgba(17, 17, 17, 0.274);
+
+    @media (max-width: 699px) {
+      width: 90%;
+    }
+  }
+  &__cardTitle {
+    text-align: center;
+    color: $White;
+    font-size: 3rem;
+    text-transform: capitalize;
+  }
+
+  &__cardDesc {
+    color: $White;
+    text-align: center;
+    width: 80%;
+    opacity: 0.8;
+    margin: 2rem 0;
+  }
+
+  &__cardForm {
+    @include flexbox(row, center, center);
+
+    @media (max-width: 699px) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__cardInput {
+    width: 50rem;
+    padding: 1.2rem;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+
+    @media (max-width: 699px) {
+      width: 100%;
+    }
+  }
+
+  &__cardBtn {
+    padding: 1.2rem 2rem;
+    background: linear-gradient(to right, $Cyan, $Blue);
+    border: none;
+    outline: none;
+    color: $White;
+    font-weight: 700;
+    border-radius: 3rem;
+    margin-left: 2rem;
+
+    @media (max-width: 699px) {
+      width: 100%;
+      margin-top: 1rem;
+      margin-left: 0rem;
+    }
+  }
+}
+
+// Footer
+.footer {
+  background-color: $DarkBlueFooter;
+  padding: 15rem 2rem 4rem 2rem;
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    @include flexbox(column, space-between, flex-start);
+  }
+
+  &__logo {
+    width: 14rem;
+    margin-bottom: 2rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    @include flexbox(row, space-between, flex-start);
+
+    @media (max-width: 699px) {
+      @include flexbox(column, center, flex-start);
+    }
+
+    & > * {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__colOne {
+    width: 40%;
+    @include flexbox(row, space-between, flex-start);
+    color: $White;
+
+    img {
+      margin-right: 2rem;
+    }
+  }
+
+  &__colTwo {
+    @include flexbox(column, center, flex-start);
+    list-style: none;
+
+    li {
+      @include flexbox(row, center, center);
+      margin-bottom: 1.5rem;
+
+      a {
+        color: $White;
+        margin-left: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__colThree {
+    @include flexbox(column, center, flex-start);
+    list-style: none;
+    color: $White;
+  }
+
+  &__colFour {
+    @include flexbox(column, center, flex-start);
+    list-style: none;
+    color: $White;
+  }
+
+  &__colFive {
+    @include flexbox(row, center, center);
+    list-style: none;
+
+    @media (max-width: 699px) {
+      @include flexbox(row, center, center);
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 2vw;
+      }
+    }
+  }
+}
