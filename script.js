@@ -5,6 +5,7 @@ const projects = [
   "fylo-landing-page-with-two-column-layout-master",
   "huddle-landing-page-with-curved-sections-master",
   "fylo-dark-theme-landing-page-master",
+  "huddle-landing-page-with-alternating-feature-blocks-master",
 ];
 
 const list = document.getElementById("list");
