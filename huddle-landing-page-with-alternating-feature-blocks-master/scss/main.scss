@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+  --white: #fff;
+
+  --font-xsm: 1.4rem;
+  --font-md: 3rem;
+  --font-l: 4rem;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media (max-width: 799px) {
+    font-size: 52.4%;
+  }
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--Very-Dark-Cyan);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  font-weight: 700;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.308);
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.6;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.408);
+  }
+}
+
+// Mixins
+@mixin flexbox($dir, $justify, $align) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $dir;
+}
+
+// Header
+.header {
+  padding: 3rem 2rem;
+  height: 100vh;
+  background: var(--Very-Pale-Cyan) url(../images/bg-hero-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 699px) {
+    background-image: url(../images/bg-hero-mobile.svg);
+  }
+
+  &__columnOne {
+    h1 {
+      width: 45rem;
+      line-height: 1.3;
+      font-size: var(--font-l);
+
+      @media (max-width: 699px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    p {
+      color: var(--Very-Dark-Cyan);
+      width: 50rem;
+      font-size: 1.6rem;
+      margin: 2rem 0;
+
+      @media (max-width: 699px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    button {
+      padding: 1rem 4rem;
+      background-color: var(--Pink);
+      color: var(--Very-Pale-Cyan);
+      font-size: var(--font-xsm);
+
+      @media (max-width: 699px) {
+        width: 100%;
+        text-align: center;
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  &__columntwo {
+    &--img {
+      width: 40vw;
+
+      @media (max-width: 699px) {
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .navbar {
+    padding: 0 2rem;
+    display: block;
+
+    &__container {
+      max-width: 114rem;
+      margin: 0 auto;
+      @include flexbox(row, space-between, center);
+    }
+
+    .navbar__logo {
+      width: 14rem;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .navbar__cta {
+      button {
+        display: block;
+        padding: 1rem 3rem;
+        background-color: var(--white);
+        color: var(--Very-Dark-Cyan);
+      }
+    }
+  }
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    height: 90%;
+    @include flexbox(row, space-between, center);
+
+    @media (max-width: 699px) {
+      @include flexbox(column, center, center);
+      height: 100%;
+    }
+  }
+}
+
+// Flowing conversion
+.section {
+  margin: 6rem 0;
+  padding: 0 2rem;
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 6rem;
+    @include flexbox(row, space-between, center);
+
+    @media (max-width: 699px) {
+      @include flexbox(column, center, center);
+    }
+  }
+
+  &__columnOne {
+    h1 {
+      font-size: var(--font-md);
+      margin-bottom: 1rem;
+
+      @media (max-width: 699px) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+    p {
+      color: var(--Grayish-Blue);
+      font-size: var(--font-xsm);
+      font-weight: 700;
+      opacity: 0.7;
+      width: 42rem;
+
+      @media (max-width: 699px) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  &__columnTwo {
+    &--img {
+      width: 40rem;
+
+      @media (max-width: 699px) {
+        width: 100%;
+        margin: 4rem 0;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.section:nth-of-type(2) .section__container {
+  flex-direction: row-reverse;
+  @media (max-width: 699px) {
+    @include flexbox(column, center, center);
+  }
+}
+
+.boxCard {
+  position: relative;
+  padding: 0 2rem;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+  width: 70rem;
+  height: 20rem;
+  max-width: 100%;
+  margin: 0 auto;
+  @include flexbox(column, center, center);
+  z-index: 10;
+  margin-bottom: -10rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+
+  @media (max-width: 699px) {
+    width: 93%;
+  }
+
+  h1 {
+    font-size: var(--font-md);
+    margin-bottom: 1rem;
+
+    @media (max-width: 699px) {
+      text-align: center;
+    }
+  }
+
+  button {
+    background-color: var(--Pink);
+    padding: 1rem 4rem;
+    color: var(--Very-Pale-Cyan);
+  }
+}
+
+.footer {
+  background-color: var(--Very-Dark-Cyan);
+  padding: 12rem 2rem 5rem 2rem;
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+  }
+
+  &__columnOne {
+    &--logo {
+      width: 16rem;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__columnTwo {
+    @include flexbox(row, space-between, flex-start);
+    margin-top: 2rem;
+
+    @media (max-width: 699px) {
+      @include flexbox(column, center, flex-start);
+    }
+  }
+
+  &__sectionOne {
+    li {
+      @include flexbox(row, center, flex-start);
+      margin-bottom: 2rem;
+      p {
+        color: var(--white);
+        font-size: var(--font-xsm);
+        margin-left: 1rem;
+        width: 40rem;
+      }
+    }
+  }
+
+  &__sectionTwo {
+    li {
+      color: var(--white);
+      font-size: var(--font-xsm);
+      margin-bottom: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__sectionThree {
+    li {
+      color: var(--white);
+      font-size: var(--font-xsm);
+      margin-bottom: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__sectionFour {
+    @include flexbox(row, space-between, center);
+    width: 10rem;
+    margin-top: 2rem;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+
+    li .fab {
+      @include flexbox(row, center, center);
+      color: var(--white);
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      border: 1px solid var(--white);
+    }
+  }
+}
