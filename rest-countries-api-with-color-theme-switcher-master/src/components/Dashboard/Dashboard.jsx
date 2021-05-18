@@ -1,10 +1,9 @@
 import React from "react";
-import Countries from "../Countries/Countries";
-import classes from "./Dashboard.module.scss";
+import Layout from "../../layout/layout";
 const Dashboard = () => {
   return (
     <>
-      <Countries />
+      <Layout />
     </>
   );
 };

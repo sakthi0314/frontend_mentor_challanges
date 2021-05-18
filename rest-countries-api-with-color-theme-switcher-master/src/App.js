@@ -1,10 +1,8 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
 import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 import Navbar from "./components/Navbar/Navbar";
-import { themeToggleAction } from "./redux/actions/themeAction";
 import Theme from "./theme/Theme";
 
 const App = () => {
