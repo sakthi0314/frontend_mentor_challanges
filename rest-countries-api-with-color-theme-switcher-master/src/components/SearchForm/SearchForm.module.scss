@@ -1,0 +1,28 @@
+@import "../../styles/mixins";
+
+.form {
+  width: 40rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 1.4rem 3rem;
+  @include flexbox(row, center, center);
+  border-radius: 0.3rem;
+
+  @media (max-width: 624px) {
+    width: 100%;
+  }
+  span {
+    display: block;
+    font-size: 2rem;
+    padding-right: 1rem;
+    margin-bottom: -0.6rem;
+  }
+
+  input {
+    flex: 1;
+    background-color: transparent;
+    max-width: 100%;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 1.4rem;
+  }
+}

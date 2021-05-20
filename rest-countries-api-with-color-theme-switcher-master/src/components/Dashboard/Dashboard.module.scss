@@ -1,0 +1,23 @@
+@import "../../styles/mixins";
+
+.dashboard {
+  margin-top: 2rem;
+  padding: 0 2rem;
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+  }
+
+  .columnOne {
+    @include flexbox(row, space-between, center);
+
+    @media (max-width: 624px) {
+      @include flexbox(column, center, flex-start);
+    }
+  }
+
+  .columnTwo {
+    @include flexbox(row, space-between, center);
+  }
+}
