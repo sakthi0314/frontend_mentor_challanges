@@ -159,7 +159,7 @@ footer .container p {
 
 footer .container p a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--white);
 }
 
 footer .container p a:hover {
