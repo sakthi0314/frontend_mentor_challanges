@@ -22,8 +22,11 @@ projects.forEach((name, i) => {
   <div class="grid__item--img">
     <img
       src="${name}/design/desktop-preview.jpg"
-      alt=""
+      alt="${name}"
     />
+  </div>
+  <div class="grid__item--text">
+  <h3>${name}</h3>
   </div>
   <div class="grid__item--info">
     <a  target="_blank" href="https://github.com/sakthi0314/frontend_mentor_challanges/tree/main/${name}" class="github">
