@@ -123,6 +123,7 @@ img {
 
 .grid__item--text {
   padding: 0 1.3rem;
+  text-transform: capitalize;
 }
 
 .grid__item--text h3 {
