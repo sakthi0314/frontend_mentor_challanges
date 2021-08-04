@@ -2,39 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sakthi0314 Frontend Mentor Projects</title>
-
+    <title>Frontend mentor</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="container">
-      <h1>Frontend Mentor Challenges</h1>
+    <nav class="navbar" id="nav">
+      <div class="container">
+        <div class="navbar__logo">
+          <h1>< Dev<span>By</span>Sakthi /></h1>
+        </div>
+      </div>
+    </nav>
 
-      <h2>Projects</h2>
-      <ul id="list"></ul>
-    </div>
+    <section class="header">
+      <div class="container">
+        <h1>Frontend <span>Mentor</span> Challanges</h1>
+      </div>
+    </section>
 
-    <footer>
-      Created with
-      <i class="fas fa-heart"></i>
+    <section class="grid">
+      <div class="container">
+        <ul class="grid__container" id="list"></ul>
+      </div>
+    </section>
 
-      by
-      <a target="_blank" href="https://www.twitter.com/SAKTHI06658654"
-        >sakthi0134</a
-      >
-      . Code on
-      <a
-        target="_blank"
-        href="https://github.com/sakthi0134/Frontend-Mentor-Challenges"
-      >
-        GitHub
-      </a>
-    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
