@@ -11,6 +11,7 @@ let projects = [
   "huddle-landing-page-with-curved-sections-master",
   "fylo-dark-theme-landing-page-master",
   "huddle-landing-page-with-alternating-feature-blocks-master",
+  "sunnyside-agency-landing-page-main"
 ];
 
 projects.forEach((name, i) => {

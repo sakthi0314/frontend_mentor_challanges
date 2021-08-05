@@ -1,0 +1,29 @@
+.primary {
+  padding: 1.2rem 3rem;
+  border-radius: 3rem;
+  font-family: $font-serif;
+  font-weight: map-get($font-weight, medium);
+  font-size: 1.4rem;
+  background-color: $Yellow;
+  color: $VeryDarkDesaturatedBlue;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $White;
+    background-color: $Blue;
+  }
+}
+
+.secondary {
+  @extend .primary;
+  background-color: $White;
+}
+
+.link {
+  font-family: $font-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid $SoftRed;
+  text-decoration: none;
+  color: $VeryDarkDesaturatedBlue;
+}
