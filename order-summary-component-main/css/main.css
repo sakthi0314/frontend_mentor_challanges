@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+.primary {
+  background-color: #3829e0;
+  padding: 1em;
+  border-radius: 1rem;
+  color: white;
+  font-weight: 700;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.primary:hover {
+  opacity: 0.7;
+}
+
+.secondary {
+  background-color: transparent;
+  font-family: inherit;
+  color: #3829e0;
+  text-decoration: underline;
+}
+
+.secondary:hover {
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  background-color: #f5f7ff;
+  color: #1f2f56;
+  padding: 0 2rem;
+  line-height: 1.3;
+}
+
+button {
+  outline: none;
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+}
+
+.container .card {
+  max-width: 38rem;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.container .card__header {
+  background-image: url("../images/illustration-hero.svg");
+  min-height: 20rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.container .card__body {
+  background-color: white;
+  padding: 3em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .card__body h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.container .card__body p {
+  width: 100%;
+  color: #7280a7;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.container .card__body .price {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f5f7ff;
+  border-radius: 1rem;
+  padding: 1em;
+  margin: 2rem 0;
+}
+
+.container .card__body .price__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .card__body .price__left--plan h6 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.container .card__body .price__left--plan p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.container .card__body .price__left img {
+  margin-right: 1rem;
+}
+
+.btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btn .primary {
+  margin-bottom: 1rem;
+}
+
+.btn .secondary {
+  text-decoration: none;
+  color: #1f2f56;
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.css.map */

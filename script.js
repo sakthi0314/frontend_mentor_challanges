@@ -1,4 +1,4 @@
-// DOM ELEMENT
+// DOM ELEMENTS
 let list = document.getElementById("list");
 let nav = document.getElementById("nav");
 
@@ -11,14 +11,13 @@ let projects = [
   "huddle-landing-page-with-curved-sections-master",
   "fylo-dark-theme-landing-page-master",
   "huddle-landing-page-with-alternating-feature-blocks-master",
-  "sunnyside-agency-landing-page-main"
+  "sunnyside-agency-landing-page-main",
+  "order-summary-component-main"
 ];
 
-projects.forEach((name, i) => {
+projects.forEach((name) => {
   const listItem = document.createElement("li");
-
   listItem.classList.add("grid__item");
-
   listItem.innerHTML = `
   <div class="grid__item--img">
     <img
@@ -38,7 +37,6 @@ projects.forEach((name, i) => {
     </a>
   </div> 
 `;
-
   list.appendChild(listItem);
 });
 
