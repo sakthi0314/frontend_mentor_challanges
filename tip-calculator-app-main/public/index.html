@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="logo" />
+        </div>
+
+        <div class="card">
+          <div class="card__inputs">
+            <!-- Bill -->
+            <div class="bill">
+              <div class="bill__label">
+                <label for="bill">Bill</label>
+              </div>
+              <div class="bill__input">
+                <img src="./assets/icon-dollar.svg" alt="icon-dollar" />
+                <input type="number" placeholder="00.00" id="bill-input" />
+              </div>
+            </div>
+
+            <!-- Tips -->
+            <div class="tips">
+              <div class="tips__label">
+                <p>Select Tip %</p>
+              </div>
+
+              <div class="tips__container">
+                <div class="tip">
+                  <h3 id="tipVal">5%</h3>
+                </div>
+                <div class="tip">
+                  <h3 id="tipVal">10%</h3>
+                </div>
+                <div class="tip active">
+                  <h3 id="tipVal">15%</h3>
+                </div>
+                <div class="tip">
+                  <h3 id="tipVal">25%</h3>
+                </div>
+                <div class="tip">
+                  <h3 id="tipVal">50%</h3>
+                </div>
+                <div class="tip">
+                  <input
+                    type="number"
+                    name="tip"
+                    id="custom-tip"
+                    placeholder="custom"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- number of people -->
+            <div class="people">
+              <div class="people__label">
+                <p>Number of people</p>
+                <h6 id="error">can't be zero</h6>
+              </div>
+              <div id="number-of-pepole-container" class="people__input">
+                <img src="./assets/icon-person.svg" alt="icon-person" />
+                <input type="number" value="1" id="no-of-person" />
+              </div>
+            </div>
+          </div>
+
+          <div class="card__results">
+            <ul class="results">
+              <li class="result">
+                <div class="result__one">
+                  <h5>Tip Amount</h5>
+                  <p>/ person</p>
+                </div>
+                <div class="result__two">
+                  <h1 id="tip">$0.00</h1>
+                </div>
+              </li>
+
+              <li class="result" style="margin-top: 2em">
+                <div class="result__one">
+                  <h5>Total</h5>
+                  <p>/ person</p>
+                </div>
+                <div class="result__two">
+                  <h1 id="total-tips">$0.00</h1>
+                </div>
+              </li>
+            </ul>
+
+            <div class="card__reset" style="width: 100%">
+              <button id="reset" class="btn">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../src/index.js"></script>
+  </body>
+</html>

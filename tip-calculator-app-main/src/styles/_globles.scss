@@ -1,0 +1,258 @@
+*,
+*::after,
+*::before {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: $Light-grayish-cyan-1;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn {
+  padding: 0.7em 2em;
+  width: 100%;
+  border-radius: 4px;
+  background-color: $Strong-cyan;
+
+  &:hover {
+    background-color: lighten($Strong-cyan, 10%);
+  }
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  @include flexbox(column, center, center);
+
+  .logo {
+    width: 14rem;
+    margin: 5rem 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.card {
+  width: 60%;
+  background-color: $White;
+  border-radius: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 834px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+
+  &__inputs {
+    padding: 1.6em;
+
+    .bill {
+      @include flexbox(column, flex-start, flex-start);
+      margin-bottom: 2rem;
+
+      &__label {
+        margin-bottom: 0.5rem;
+
+        label {
+          font-size: 1.4rem;
+          color: $Dark-grayish-cyan;
+        }
+      }
+
+      &__input {
+        border: 2px solid $Strong-cyan;
+        border-radius: 3px;
+        padding: 0.3em;
+        width: 100%;
+        @include flexbox(row, space-between, flex-start);
+
+        input {
+          font-family: inherit;
+          font-size: 1.5rem;
+          font-weight: 700;
+          text-align: right;
+          color: $Very-dark-yan;
+          max-width: 100%;
+
+          &::-webkit-outer-spin-button,
+          ::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .tips {
+    margin: 2em 0;
+
+    &__label {
+      margin-bottom: 0.5rem;
+
+      p {
+        font-size: 1.4rem;
+        color: $Dark-grayish-cyan;
+      }
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+      grid-gap: 1em;
+
+      .tip {
+        background-color: $Very-dark-yan;
+        padding: 0.4em 0.6em;
+        border-radius: 3px;
+        cursor: pointer;
+
+        h3 {
+          font-size: 1.5rem;
+          color: $White;
+          text-align: center;
+          font-weight: 700;
+        }
+
+        &:not(:last-child) {
+          &.active {
+            background-color: $Strong-cyan;
+          }
+
+          &:hover {
+            background-color: $Strong-cyan;
+          }
+        }
+
+        &:last-child {
+          display: flex;
+          background-color: transparent;
+          border: 2px solid $Strong-cyan;
+
+          input {
+            flex: 1;
+            max-width: 100%;
+            text-align: right;
+            background-color: transparent;
+            font-weight: 700;
+            font-family: inherit;
+            color: $Very-dark-yan;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .people {
+    &__label {
+      margin-bottom: 0.5rem;
+      @include flexbox(row, space-between, center);
+
+      p {
+        font-size: 1.4rem;
+        color: $Dark-grayish-cyan;
+      }
+
+      h6 {
+        color: red;
+        font-size: 1.3rem;
+        font-weight: 400;
+        opacity: 0;
+      }
+    }
+
+    &__input {
+      border: 2px solid $Strong-cyan;
+      border-radius: 3px;
+      padding: 0.45em;
+      width: 100%;
+      @include flexbox(row, space-between, flex-start);
+
+      input {
+        flex: 1;
+        font-family: inherit;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: right;
+        color: $Very-dark-yan;
+      }
+    }
+  }
+
+  &__results {
+    background-color: $Very-dark-yan;
+    border-radius: 1.6rem;
+    margin: 2em;
+    padding: 2em;
+    @include flexbox(column, space-between, center);
+
+    .results {
+      width: 100%;
+      @include flexbox(column, flex-start, flex-start);
+
+      .result {
+        width: 100%;
+        @include flexbox(row, space-between, center);
+
+        &__one {
+          h5 {
+            color: $White;
+          }
+
+          p {
+            color: $Dark-grayish-cyan;
+          }
+        }
+
+        &__two {
+          h1 {
+            color: $Strong-cyan;
+            font-size: 2.8rem;
+          }
+        }
+      }
+    }
+
+    &__reset {
+      width: 100%;
+    }
+  }
+}
