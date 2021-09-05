@@ -1,0 +1,104 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.header {
+  position: relative;
+  padding: 0 2em;
+  background-image: url("../../assets/pattern-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    max-width: 114rem;
+    margin: 0 auto;
+    min-height: 25rem;
+    @include flex(column, center, center);
+  }
+
+  &__logo {
+    font-size: 2.6rem;
+    font-weight: map-get($fontWeight, medium);
+    color: $white;
+  }
+
+  &__form {
+    @include flex(row, center, center);
+    width: 100%;
+    margin: 1.5em 0;
+  }
+
+  &__input {
+    width: 40rem;
+    background-color: $white;
+    display: flex;
+    padding: 0.65em;
+    border-radius: 8px 0 0 8px;
+
+    input {
+      flex: 1;
+      width: 100%;
+      outline: 0;
+      border: 0;
+      background-color: transparent;
+      font-family: inherit;
+      font-size: 1.6rem;
+      font-weight: map-get($fontWeight, medium);
+      color: $Dark-Gray;
+
+      &::placeholder {
+        font-weight: map-get($fontWeight, regular);
+        font-size: 1.5rem;
+        color: $Dark-Gray;
+      }
+    }
+  }
+
+  &__submit {
+    button {
+      padding: 0.9em;
+      border-radius: 0 8px 8px 0;
+      background-color: $Very-Dark-Gray;
+      color: $white;
+      font-weight: map-get($fontWeight, bold);
+      outline: 0;
+      border: 0;
+    }
+  }
+
+  &__result {
+    position: absolute;
+    bottom: -40%;
+    background-color: $white;
+    padding: 2em 3em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(17, 17, 17, 0.13);
+    z-index: 100;
+
+    ul {
+      list-style: none;
+      @include flex(row, space-between, center);
+
+      li {
+        padding: 2rem;
+
+        h4 {
+          font-size: 1.3rem;
+          color: $Dark-Gray;
+          font-weight: map-get($fontWeight, medium);
+          margin-bottom: 1.2rem;
+        }
+
+        h2 {
+          font-size: 2.3rem;
+          font-weight: map-get($fontWeight, medium);
+        }
+
+        &:not(:last-child) {
+          margin-right: 3em;
+          border-right: 2px solid lighten($Dark-Gray, 17%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import "./variables";
+
+*,
+*::before,
+*::after {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: map-get($fontWeight, medium);
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(83, 30, 182);
+  height: 6rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    button {
+      height: 100%;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+
+      padding: 0 1em;
+      cursor: pointer;
+
+      .link {
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+
+      &:hover {
+        background-color: rgb(95, 27, 221);
+      }
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+  }
+}
+
+.container {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+section {
+  margin: 2em 0;
+
+  .form {
+    width: 100%;
+
+    .input {
+      display: flex;
+
+      input[type="button"] {
+        background-color: rgb(83, 30, 182);
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-family: inherit;
+        text-transform: uppercase;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(170, 157, 187);
+        margin-bottom: 2em;
+      }
+
+      input,
+      textarea {
+        flex: 1;
+        font-family: inherit;
+        font-weight: lighter;
+        padding: 0.6em 0;
+        border-radius: 3px;
+        outline: 0;
+        border: 0;
+      }
+    }
+  }
+}
+
+main {
+  margin: 2em 0;
+
+  .container {
+    ul {
+      list-style: none;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+      grid-gap: 1em;
+      place-items: center;
+
+      li {
+        background-color: rgba(17, 17, 17, 0.075);
+        padding: 1em;
+        border-radius: 3px;
+        max-width: 28rem;
+        min-height: 25rem;
+        cursor: pointer;
+
+        h4 {
+          font-weight: normal;
+          font-size: 2rem;
+          color: rgb(83, 30, 182);
+        }
+
+        p {
+          width: 100%;
+          margin: 0.5em 0;
+        }
+
+        blockquote {
+          font-size: 1.4rem;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

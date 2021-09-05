@@ -12,7 +12,8 @@ let projects = [
   "fylo-dark-theme-landing-page-master",
   "huddle-landing-page-with-alternating-feature-blocks-master",
   "sunnyside-agency-landing-page-main",
-  "order-summary-component-main"
+  "order-summary-component-main",
+  "3-column-preview-card-component-main",
 ];
 
 projects.forEach((name) => {
